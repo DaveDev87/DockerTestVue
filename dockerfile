@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # instalar dependencias del proyecto
-RUN npm install
+RUN yarn install
 
 # copiar los archivos y carpetas del proyecto al directorio de trabajo actual (es decir, la carpeta 'app')
 COPY . .
