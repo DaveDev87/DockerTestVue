@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # instalar dependencias del proyecto
-RUN yarn install
+RUN npm install
 
 # copiar los archivos y carpetas del proyecto al directorio de trabajo actual (es decir, la carpeta 'app')
 COPY . .
@@ -19,4 +19,4 @@ COPY . .
 RUN npm run build
 
 EXPOSE 8080
-CMD [ "http-server", "dist" ]
+CMD [ "npm", "run", "serve" ]
